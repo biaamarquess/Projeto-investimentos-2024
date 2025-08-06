@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request,redirect, jsonify,session,url_for
+from flask import Flask, render_template, request, redirect, jsonify, session, url_for
 import sqlite3
 import plotly.graph_objs as go
 import plotly.io as pio
@@ -7,6 +7,7 @@ import os
 app = Flask(__name__)
 app.secret_key = 'secreta_chave'  # Necessário para usar sessões
 
+
 def get_db_connection():
     # Caminho absoluto para o banco de dados dentro de static/models
     db_path = os.path.join(os.path.dirname(__file__), 'static', 'models', 'investimento.db')
@@ -14,13 +15,14 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row  # Retorna resultados como dicionários
     return conn
 
-# Configuração existente
-app.config['dados_login'] = []
 
 # Rota principal
 @app.route('/')
 def index():
-    return render_template('index.html')
+    if 'username' in session:  # Verifica se o usuário está logado
+        return render_template('index.html')
+    return redirect(url_for('login'))  # Redireciona para a página de login
+
 
 # Rota de login
 @app.route('/login', methods=['GET', 'POST'])
@@ -44,10 +46,8 @@ def login():
 
     return render_template('login.html')
 
-@app.route('/bemvindo')
-def bemvindo():
-    return render_template('bemvindo.html')
 
+# Rota de cadastro
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
     if request.method == 'POST':
@@ -74,10 +74,22 @@ def cadastro():
 
     return render_template('cadastro.html')
 
+
+# Rota de boas-vindas
+@app.route('/bemvindo')
+def bemvindo():
+    if 'username' in session:  # Verifica se o usuário está logado
+        return render_template('bemvindo.html', username=session['username'])
+    return redirect(url_for('login'))  # Redireciona para o login se não estiver autenticado
+
+
 # Rota para a página de simulação
 @app.route('/simulacao')
 def simulacao():
-    return render_template('simulacao.html')
+    if 'username' in session:  # Verifica se o usuário está logado
+        return render_template('simulacao.html')
+    return redirect(url_for('login'))  # Redireciona para o login se não estiver autenticado
+
 
 # Rota para processar a simulação
 @app.route('/simular', methods=['POST'])
@@ -119,5 +131,15 @@ def simular():
     except Exception as e:
         print(f"Erro na simulação: {e}")
         return jsonify({'error': str(e)}), 400
-    
-app.run(host='127.0.0.1', port=80, debug=True)
+
+
+# Rota para logout
+@app.route('/logout')
+def logout():
+    session.pop('username', None)  # Remove o usuário da sessão
+    return redirect(url_for('login'))
+
+
+# Executa o app
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
