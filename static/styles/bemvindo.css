@@ -1,0 +1,53 @@
+/* Estilo geral */
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E6DFF1;
+    color: #4A4A4A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do container */
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+}
+
+/* Estilo do título */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #7E57C2;
+    margin-bottom: 20px;
+}
+
+/* Estilo do texto */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do botão */
+a {
+    background-color: #7E57C2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: #6841A8;
+}
