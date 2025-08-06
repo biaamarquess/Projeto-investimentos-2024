@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst Investment - Cadastro</title>
+    <link rel="stylesheet" href="/static/styles/cadastro.css">
+</head>
+<body>
+
+    <div class="background">
+        <img src="/static/assets/fundo.png" alt="">
+    </div>
+
+    <div class="logo">
+        <img src="/static/assets/logo_login_cadastro.png" alt="">
+    </div>
+
+    <h3>Amethyst Investment segurança e estratégia para transformar seu futuro financeiro com confiança.</h3>
+
+    <div >
+        <button class="sair">
+            <a href="/">Voltar para página de inicio</a>
+        </button>
+    </div>
+
+    <img src="/static/assets/tudo.png" class="fundinho" alt="">
+
+    <div class="bloco">
+        <form action="/cadastro" method="POST">
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome:" required><br><br>
+            <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário:" required><br><br>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha:" required><br><br>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirme sua senha:" required><br><br>
+            <p class="p_um"><a class="a_um" href="/login">Já possui conta? <strong>Faça login</strong></a></p>
+
+            <!-- Botão de envio agora dentro do formulário -->
+            <button type="submit" class="enviar">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="eles">
+        <img src="/static/assets/eles.png" alt="">
+    </div>
+
+</body>
+</html>

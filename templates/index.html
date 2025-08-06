@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst Investment</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+
+
+    <style>
+        @keyframes appear {
+            from{
+                opacity: 0;
+                scale: 0.4;
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        .block{
+            animation: appear 5s linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+
+        .block_dois{
+            animation: appear 5s linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+
+        .block_tres{
+            animation: appear 5s linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+
+        /* Rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilo da navegação */
+        .navegacao {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navigation {
+            
+            background-color: white;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .logo_nav {
+            margin-right: 15px;
+        }
+
+        .navigation li {
+            margin: 0 10px;
+            color: purple;
+        }
+
+        .navigation_link {
+            color: purple;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="background">
+        <img src="/static/assets/fundo.png" alt="">
+    </div>
+
+    <div class="navegacao">
+        <nav>
+            <ul class="navigation" >
+
+                <img class="logo_nav" src="/static/assets/nav_logo.png" width="75px" alt="">
+                <li>
+                    <a href="#sobre_nos" class="navigation_link" >Sobre nós</a>
+                </li>
+
+                <li>
+                    |
+                </li>
+
+                <li>
+                    <a href="#como_investir" class="navigation_link" >Como investir</a>
+                </li>
+
+                <li>
+                    |
+                </li>
+
+                <li>
+                    <a href="#investimentos" class="navigation_link" >Investimentos</a>
+                </li>
+
+                <li>
+                    |
+                </li>
+
+                <li>
+                    <a href="#simular" class="navigation_link" >Simular</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="info">
+
+        <img class="logo_1" src="/static/assets/logoo.png" width="500px" alt="">
+
+        <p>lapidando oportunidades com estratégia e confiança para construir seu futuro financeiro.</p>
+        
+
+        <button class="veja_mais">
+            <a href="">VEJA MAIS</a>
+        </button>
+
+        <button type="button" class="veja_mais_l">
+            <a href="/login">FAÇA LOGIN</a>
+        </button>
+
+        <img src="/static/assets/celular_inc.png" alt="" width="800px" class="celular_inf">
+
+    </div>
+
+
+
+
+    <!-- SOBRE NOS -->
+    <section id="sobre_nos">
+        <div class="block">
+            <div class="sobre_nos">
+
+                <div class="foto">
+                    <img src="/static/assets/imagem_quem somos2.png" width="450px" alt="">
+                </div>
+
+                <h2 class="quem_somos">Quem somos</h2>
+                <img class="listra_1" src="/static/assets/listra_roxa.png" alt="">
+
+                <p class="p1">Bem-vindo à Amethyst Investment!</p>
+
+                <p class="p2">
+                    A Amethyst Investment é uma empresa de investimentos dedicada a 
+                    proporcionar soluções financeiras personalizadas e de alta qualidade. 
+                    Com uma equipe experiente e comprometida, oferecemos estratégias inovadoras
+                    para atender às necessidades financeiras de nossos clientes, ajudando-os a 
+                    alcançar seus objetivos de forma segura e eficiente.
+                </p>
+
+                <p class="p_linha_1" >────────────────────────────────────────────</p>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- OBJETIVOS -->
+    <div class="block_dois">
+        <div class="objetivos">
+
+            <h2>Nosso objetivo</h2>
+            <img class="listra_2" src="/static/assets/listra_roxa.png" alt="">
+
+            <p class="p_obj" >
+                Nosso objetivo é oferecer um caminho seguro e rentável para o crescimento 
+                do patrimônio de nossos clientes. Trabalhamos com uma abordagem focada em 
+                diversificação, transparência e análise detalhada do mercado, alinhando as 
+                melhores oportunidades de investimento com o perfil e as metas de cada cliente. 
+                Acreditamos que, com uma gestão inteligente e comprometida, é possível alcançar 
+                resultados sustentáveis e duradouros.
+                
+            </p>
+
+            <p class="linha_dois" >───────────────────────────────────────────────────────────</p>
+
+            <div class="img_obj">
+                <img src="/static/assets/imagem_nosso_obj.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!--SEGURANÇA-->
+
+    <div class="seguranca">
+
+        <h2>Segurança</h2>
+        <div class="textos"> 
+            <h4 class="h_um" >Proteção de dados</h4>
+            <p class="seguranca_p_um">
+                Utilizamos as tecnologias mais avançadas de proteção de dados, 
+                com criptografia de ponta, garantindo que 
+                todas as informações pessoais e financeiras estejam seguras em nossos sistemas.
+            </p>
+
+            <img src="/static/assets/cadeado.png" alt="" class="cadeado">
+
+            <h4 class="h_dois" >Conformidade Regulatória</h4>
+            <p class="seg_p">
+                Seguimos as melhores práticas do mercado e as regulamentações financeiras, 
+                assegurando que todas as operações estejam em conformidade com as leis e normas 
+                vigentes.
+            </p>
+
+
+            <h4 class="h_tres">Ambiente Transparente e Confiável</h4>
+            <p class="tres_p">
+                Nosso compromisso é criar um ambiente de investimento seguro,
+                onde nossos clientes possam tomar decisões financeiras com confiança,
+                sabendo que suas informações e recursos estão protegidos.
+            </p>
+
+            <h4 class="h_quatro">Segurança Cibernética</h4>
+            <p class="quatro_p">
+                Implementamos protocolos rigorosos de segurança cibernética, 
+                incluindo autenticação de múltiplos fatores, para proteger contra 
+                acessos não autorizados e ameaças digitais.
+            </p>
+
+        </div>
+
+        <div class="bloco_seg">
+            <img src="/static/assets/quadrado.png" width="1519px" alt="">
+        </div>
+
+    </div>
+
+
+    <p class="linhazinha" >💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵</p>
+
+
+
+
+
+
+    <!-- COMO INVESTIR -->
+    <section id="como_investir">
+        <div class="como_investir">
+
+            <h2 class="h_um_inv" >Como investir </h2>
+            <p class="p_investir_um">
+                Investir com a Amethyst Investment é fácil e seguro. 
+                Identifique suas metas financeiras, avalie seu perfil de risco e escolha as opções 
+                de investimento que melhor atendem às suas necessidades. Nosso processo de abertura de conta é rápido e totalmente online.
+                Com assessoria especializada e uma plataforma intuitiva, você pode acompanhar seus resultados em tempo real, garantindo 
+                transparência e controle. Estamos aqui para transformar seus objetivos em conquistas. Comece hoje mesmo!
+            </p>
+            
+            <p class="p_inv" >────────────────────────────────────────────</p>
+
+
+            <h2 class="h_dois_inv">Por que investir com a Amethyst Investment? </h2>
+            <p class="p_investir_dois">
+                Na Amethyst, combinamos tecnologia avançada, experiência de mercado e uma abordagem
+                centrada no cliente para oferecer soluções de alta performance. Nosso compromisso é
+                com o seu sucesso, sempre colocando seus interesses em primeiro lugar.
+            </p>
+
+            <p class="p_inv_dois" >────────────────────────────────────────────</p>
+
+            <img src="/static/assets/dindin.png" width="430px" alt="" class="dimdim">
+
+            <div class="fundinho">
+                <img src="/static/assets/roxo_verde.png" width="1519px" alt="">
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- INVESTIMENTOS--> 
+    <section id="investimentos">
+        <div class="investimentos">
+            <h2>Investimentos</h2>
+            <img class="quadrado_roxo" src="/static/assets/quadrado_roxo.png" width="1519px" alt="">
+
+            <p>
+                Na Amethyst Investment, nosso principal objetivo é proporcionar aos nossos clientes a oportunidade de 
+                construir um futuro financeiro sólido, equilibrando segurança e crescimento. Oferecemos uma gama diversificada
+                de opções de investimento, cuidadosamente selecionadas para atender diferentes perfis e metas financeiras.
+                Nosso compromisso é com a transparência, a rentabilidade e a sustentabilidade a longo prazo.
+            </p>
+
+            <img src="/static/assets/dinheiro_um.png" aria-colspan="din_umm" alt="" class="din_um">
+
+            <h3 class="botao_investimentos_b" > 
+                <a href="#planos">PLANOS DE INVESTIMENTOS</a>
+            </h3>
+
+            <img src="/static/assets/dinheiro_dois.png" alt="" class="din_doiss">
+        </div>
+    </section>
+
+
+
+<!-- PLANOS--> 
+<div class="block_tres">
+        <h2 class="h_planos">───── Planos de investimento ─────</h2>
+
+    <section id="planos">
+        <div class="planos">
+            <div class="blocos">
+                <!-- PLANO 1 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq1">
+                    <label for="faq1">
+                        <img src="/static/assets/teste.png" width="240px" alt="" class="cara">
+                    </label>
+                    <div class="content">
+                        <p>
+                            Com a Amethyst Investment, você pode diversificar seu patrimônio em ativos exclusivos, como obras de arte, 
+                            vinhos raros e imóveis de luxo em localizações privilegiadas. 
+                        </p>
+                        <br>
+                        <p>
+                            Unimos sofisticação e rentabilidade para oferecer segurança e retorno sólido a longo prazo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PLANO 2 -->
+                <div class="faq-item_dois">
+                    <input type="checkbox" id="faq2">
+                    <label for="faq2">
+                        <img src="/static/assets/teste_dois.png" width="300px">
+                    </label>
+                    <div class="content_dois">
+                        <p>
+                            Invista no futuro com a Amethyst Investment, focando em tecnologia
+                            de ponta, projetos essenciais de infraestrutura e mercados emergentes. 
+                            Garantimos diversificação, crescimento e retornos consistentes a longo prazo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PLANO 3 -->
+                <div class="faq-item_tres">
+                    <input type="checkbox" id="faq3">
+                    <label for="faq3">
+                        <img src="/static/assets/tradicionais.png" width="400px">
+                    </label>
+                    <div class="content_tres">
+                        <p>
+                            Os investimentos tradicionais atendem a diferentes perfis: a renda fixa,
+                            com títulos como CDBs e LCIs, é ideal para quem busca estabilidade e previsibilidade.
+                            Já as ações oferecem maior potencial de retorno a longo prazo, mas com mais risco, 
+                            sendo indicadas para investidores que acompanham o mercado.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PLANO 4 -->
+                <div class="faq-item_quatro">
+                    <input type="checkbox" id="faq4">
+                    <label for="faq4">
+                        <img src="/static/assets/personalizado.png" alt="Imagem Plano 4">
+                    </label>
+                    <div class="content_quatro">
+                        <p>
+                            O investimento personalizado inclui carteiras feitas sob medida, alinhadas aos objetivos 
+                            e ao perfil de risco de cada cliente, garantindo estratégias únicas. Além disso, oferece 
+                            planos de aposentadoria que proporcionam segurança financeira a longo prazo.
+                        </p>
+                    </div>
+                </div>
+</div>
+
+
+
+
+            <div class="linha_pla">
+                <p class="linhazinha_dois" >💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+   <!-- SEÇÃO DE SIMULAÇÃO -->
+    <section id="simular">
+        <div class="simulacao" id="simulacao">
+            <!-- Bloco de fundo verde -->
+            <div class="bac_sim">
+                <!-- Título e Subtítulo -->
+                <h1>Simulação de <span>Investimento</span></h1>
+                <p>Confira as vantagens de investir com a Amethyst Investment</p>
+
+                <div class="conteudo-simulacao">
+                    <!-- Formulário para enviar os dados -->
+                    <form id="form-simulacao" method="post" action="/simular">
+                        <label for="aporte_inicial">Aporte Inicial (R$):</label>
+                        <input type="number" id="aporte_inicial" name="aporte_inicial" placeholder="Ex: 1000" required>
+
+                        <label for="aporte_mensal">Aporte Mensal (R$):</label>
+                        <input type="number" id="aporte_mensal" name="aporte_mensal" placeholder="Ex: 500" required>
+
+                        <label for="taxa_juros">Taxa de Juros (% ao mês):</label>
+                        <input type="number" id="taxa_juros" name="taxa_juros" placeholder="Ex: 0.5" required>
+
+                        <label for="periodo">Período (meses):</label>
+                        <input type="number" id="periodo" name="periodo" placeholder="Ex: 12" required>
+
+                        <button type="submit">Calcular</button>
+                    </form>
+
+                    <!-- Div para exibir o gráfico -->
+                    <div id="chart">
+                        <!-- O gráfico será renderizado dinamicamente aqui -->
+                        <p>Aqui será exibido o gráfico de simulação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#form-simulacao').on('submit', function (e) {
+                    e.preventDefault(); // Evita que o formulário recarregue a página
+
+                    $.ajax({
+                        url: '/simular',
+                        method: 'POST',
+                        data: $(this).serialize(),
+                        success: function (response) {
+                            if (response.graph) {
+                                $('#chart').html(response.graph); // Insere o gráfico no HTML
+                            } else if (response.error) {
+                                alert('Erro: ' + response.error);
+                            }
+                        },
+                        error: function () {
+                            alert('Erro ao processar a simulação. Tente novamente.');
+                        }
+                    });
+                });
+            });
+        </script>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- FINAL -->
+     <div class="fundo_final">
+        <img src="/static/assets/tudoooo.png" alt="" class="fundo_final">
+        <h1 class="h1_f">Fale com a gente</h1>
+
+        <div class="texto_fale">
+            <p>Central de atendimento</p>
+            <p><strong>1237-4568</strong></p>
+        </div>
+        
+        <div class="texto_fale_dois">
+            <p>Ouvidoria</p>
+            <p><strong>9835-224-8925</strong></p>
+            <p>Dias úteis: 9h às 12h30 e 13h30 às 18h</p>
+        </div>
+
+        <div class="texto_fale_tres">
+            <p class="pc">Central de ajuda</p>
+            <br>
+            <p>Canal de Denúncias</p>
+            <br>
+            <p>Imprensa</p>
+        </div>
+
+        <h1 class="h1_t">Termos e normas</h1>
+        <div class="texto_termo">
+            <p class="ptr">Termos de Uso</p>
+            <br>
+            <p class="pu">Termos de Norma</p>
+            <p class="pp">───────────────</p>
+        </div>
+
+        <div class="texto_termos_dois">
+            <p class="pln">Legislação e Normas</p>
+            <br>
+            <p>Disclaimer</p>
+            <br>
+            <p class="rl">RLP</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

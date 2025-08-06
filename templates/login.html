@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst Investment</title>
+    <link rel="stylesheet" href="/static/styles/login.css">
+</head>
+<body>
+
+    <div class="background">
+        <img src="/static/assets/fundo.png" alt="">
+    </div>
+
+    <div class="logo">
+        <img src="/static/assets/logo_login_cadastro.png" alt="">
+    </div>
+
+    <h3>Amethyst Investment segurança e estratégia para transformar seu futuro financeiro com confiança.</h3>
+
+    <div>
+        <button class="sair">
+            <a href="/">Voltar para página de início</a>
+        </button>
+    </div>
+
+    <img src="/static/assets/funfun.png" class="fundinho" alt="">
+
+    <div class="bloco">
+        <!-- Certifique-se de que o formulário use o método POST -->
+        <form action="/login" method="POST">
+            <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário:" required><br><br>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha:" required>
+            <p><a href="/cadastro">Não possui conta? <strong>Cadastre-se</strong></a></p>
+        
+            <!-- Botão para enviar o formulário -->
+            <button type="submit" class="enviar">Enviar</button>
+        </form>
+        
+    </div>
+
+    <div class="eles">
+        <img src="/static/assets/eles.png" alt="">
+    </div>
+
+</body>
+</html>
